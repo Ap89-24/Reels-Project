@@ -1,0 +1,43 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+html,
+body{
+height: 100%;
+width: 100%;
+}
+
+main{
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(to right bottom , rgb(40, 35, 35) , rgb(0, 0, 0));
+      padding: 20px;
+}
+
+section{
+    height: 100%;
+    width: 350px;
+    background-color: black;
+    border-radius: 10px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.all-reels{
+    height: 100%;
+    width: 100%;
+}
+
+.reels{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.reels img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
