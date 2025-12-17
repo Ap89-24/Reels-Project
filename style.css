@@ -124,3 +124,10 @@ section{
 .right .like .red{
     color: red;
 }
+
+.right > div h4{
+    pointer-events: none;
+}
+.right > div h6{
+    pointer-events: none;
+}
