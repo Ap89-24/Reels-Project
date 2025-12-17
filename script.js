@@ -111,37 +111,37 @@ const reelsData = [
   }
 ];
 
-// let sum = "";
-// reelsData.forEach((reels)=>{
-//      sum = sum + `   <div class="reels">
-//                     <video autoplay loop muted src="./${reels.video}"></video>
-//                     <div class="bottom">
-//                         <div class="user">
-//                             <img src="${reels.userprofile}" alt="">
-//                             <h4>${reels.username}</h4>
-//                             <button>Follow</button>
-//                         </div>
-//                         <h3>${reels.caption}</h3>
-//                     </div>
-//                     <div class="right">
-//                         <div class="like">
-//                             <h4 class="like-icon icons"><i class="ri-heart-fill"></i></h4>
-//                             <h6>${reels.likecount}</h6>
-//                         </div>
-//                         <div class="comment">
-//                             <h4 class="comment-icon icons"><i class="ri-chat-3-line"></i></h4>
-//                             <h6>${reels.commentcount}</h6>
-//                         </div>
-//                         <div class="share">
-//                             <h4 class="share-icon icons"><i class="ri-share-forward-fill"></i></h4>
-//                             <h6>${reels.sharecount}</h6>
-//                         </div>
-//                          <div class="dots">
-//                             <h4 class="dots-icon icons"><i class="ri-more-2-line"></i></h4>
-//                         </div>
-//                     </div>
-//                 </div>`
-// })
+let sum = "";
+reelsData.forEach((reels)=>{
+     sum = sum + `   <div class="reels">
+                    <video autoplay loop muted src="${reels.video}"></video>
+                    <div class="bottom">
+                        <div class="user">
+                            <img src="${reels.userprofile}" alt="">
+                            <h4>${reels.username}</h4>
+                            <button>${reels.isfollowed ? "Following" : "Follow"}</button>
+                        </div>
+                        <h3>${reels.caption}</h3>
+                    </div>
+                    <div class="right">
+                        <div class="like">
+                            <h4 class="like-icon icons">${reels.isliked ? '<i class="ri-heart-fill red"></i>' : '<i class="ri-heart-fill"></i>'}</h4>
+                            <h6>${reels.likecount}</h6>
+                        </div>
+                        <div class="comment">
+                            <h4 class="comment-icon icons"><i class="ri-chat-3-line"></i></h4>
+                            <h6>${reels.commentcount}</h6>
+                        </div>
+                        <div class="share">
+                            <h4 class="share-icon icons"><i class="ri-share-forward-fill"></i></h4>
+                            <h6>${reels.sharecount}</h6>
+                        </div>
+                         <div class="dots">
+                            <h4 class="dots-icon icons"><i class="ri-more-2-line"></i></h4>
+                        </div>
+                    </div>
+                </div>`
+})
 
-// var allReels = document.querySelector('.all-reels');
-// allReels.innerHTML = sum;
+var allReels = document.querySelector('.all-reels');
+allReels.innerHTML = sum;
